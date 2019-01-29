@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import home from './asset/home.png';
-import search from './asset/search.png';
-import profile from './asset/user.png';
-import group from './asset/users.png';
-import notif from './asset/bell.png';
+import home from './asset/home.svg';
+import homeact from './asset/home-active.svg';
+import search from './asset/search.svg';
+import searchact from './asset/search-active.svg';
+import profile from './asset/user.svg';
+import profileact from './asset/user-active.svg';
+import group from './asset/users.svg';
+import groupact from './asset/users-active.svg';
+import notif from './asset/bell.svg';
+import notifact from './asset/bell-active.svg';
 import './App.css';
 import {NavBar,
         WhiteSpace,
@@ -47,7 +52,6 @@ class App extends Component {
         >
           Click to switch fullscreen
         </a>
-        <img src={home} alt={"home"}/> 
       </div>
     );
   }
@@ -66,20 +70,20 @@ class App extends Component {
             title="Home"
             key="Home"
 
-            icon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
-            />
+            icon={
+              <div/>,
+              <img src={home} alt={"home"} style={{
+                width: '22px',
+                height: '22px'}}/>
             }
-            selectedIcon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
-            />
+            selectedIcon={
+              <div/>,
+              <img src={homeact} alt={"home"} style={{
+                width: '22px',
+                height: '22px'}}/>
             }
             selected={this.state.selectedTab === 'blueTab'}
-            badge={1}
+            badge={10}
             onPress={() => {
               this.setState({
                 selectedTab: 'blueTab',
